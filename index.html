@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan | Ferdian & Agnes</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+        }
+        .font-serif-display {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1200x800/2c2c2c/a67c00?text=Foto+Pre-Wedding');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .batik-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/batik.png');
+            background-color: #a67c00; /* Gold color */
+            opacity: 0.1;
+        }
+        .card {
+            background-color: rgba(43, 43, 43, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2b2b2b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a67c00;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c99a1e;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section h-screen flex flex-col justify-center items-center text-center p-4 transition-opacity duration-1000">
+        <div class="fade-in">
+            <p class="text-lg md:text-xl tracking-wider text-gray-300">The Wedding Of</p>
+            <h1 class="font-serif-display text-5xl md:text-8xl my-4 text-yellow-400" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Ferdian & Agnes</h1>
+            <p class="text-lg md:text-xl text-gray-300">Kami akan menikah!</p>
+            <div id="countdown" class="text-2xl md:text-3xl mt-8 flex justify-center space-x-4 md:space-x-8">
+                <div><span id="days" class="font-bold"></span><br><span class="text-xs">Hari</span></div>
+                <div><span id="hours" class="font-bold"></span><br><span class="text-xs">Jam</span></div>
+                <div><span id="minutes" class="font-bold"></span><br><span class="text-xs">Menit</span></div>
+                <div><span id="seconds" class="font-bold"></span><br><span class="text-xs">Detik</span></div>
+            </div>
+             <button onclick="openInvitation()" class="mt-12 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                <i class="fas fa-envelope-open mr-2"></i> Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content - Hidden until "Buka Undangan" is clicked -->
+    <main id="main-content" class="hidden">
+        
+        <!-- Opening Section -->
+        <section class="py-20 px-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 batik-pattern"></div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                 <h2 class="font-serif-display text-4xl text-yellow-400 mb-6">Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+                 <p class="text-gray-300 leading-relaxed">
+                    Dengan penuh rasa syukur kehadirat Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami, sebagai bentuk ibadah dalam menyempurnakan separuh agama.
+                </p>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="py-20 px-6">
+            <div class="max-w-5xl mx-auto text-center">
+                <img src="https://placehold.co/150x150/2c2c2c/a67c00?text=FA" alt="Couple's Photo" class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-yellow-500 shadow-lg">
+                <p class="text-gray-400 mb-8">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+                <p class="font-semibold text-yellow-400">(QS. Ar-Rum: 21)</p>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+                    <!-- Groom -->
+                    <div>
+                        <h3 class="font-serif-display text-4xl text-yellow-400">Ferdian Purwa Atmaja</h3>
+                        <p class="mt-2 text-gray-300">Putra dari:</p>
+                        <p class="mt-1 font-semibold">Bapak Suwandi</p>
+                        <p class="text-sm text-gray-400">(Kamituwo 1 Desa Gondanglegi)</p>
+                        <p class="mt-1 font-semibold">& Ibu Retno Susilo Indrayanti</p>
+                        <p class="text-sm text-gray-400 mt-2"><i class="fas fa-map-marker-alt mr-2"></i>Ds. Gondanglegi Kec. Prambon Kab. Nganjuk</p>
+                    </div>
+                    <!-- Bride -->
+                    <div>
+                        <h3 class="font-serif-display text-4xl text-yellow-400">Agnes Ony Karamy</h3>
+                        <p class="mt-2 text-gray-300">Putri dari:</p>
+                        <p class="mt-1 font-semibold">Bapak Muhtar Efendi & Ibu Hartutik</p>
+                        <p class="mt-4 font-semibold"></p>
+                        <p class="text-sm text-gray-400 mt-2"><i class="fas fa-map-marker-alt mr-2"></i>Dsn. Berdan Ds. Gondanglegi Kec. Prambon Kab. Nganjuk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="py-20 px-6 bg-black bg-opacity-50">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="font-serif-display text-4xl md:text-5xl text-yellow-400 mb-12">Detail Acara</h2>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                    <!-- Akad Nikah Card -->
+                    <div class="card rounded-2xl p-8 w-full md:w-2/5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="font-serif-display text-3xl text-yellow-400">Akad Nikah</h3>
+                        <div class="w-20 h-1 bg-yellow-500 mx-auto my-4 rounded-full"></div>
+                        <p class="text-xl font-semibold"><i class="fas fa-calendar-alt mr-2"></i>Sabtu, 08 Nov 2025</p>
+                        <p class="text-lg mt-2"><i class="fas fa-clock mr-2"></i>Pukul 08.00 WIB</p>
+                        <p class="mt-4 text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i>Lokasi:</p>
+                        <p class="font-semibold">Rumah Mempelai Wanita</p>
+                        <p class="text-sm text-gray-400">Dsn. Berdan Ds. Gondanglegi Kec. Prambon Kab. Nganjuk</p>
+                        <a href="https://maps.app.goo.gl/95a4y2m6H8q9B7b27" target="_blank" class="mt-6 inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300">
+                            <i class="fas fa-map-location-dot mr-2"></i> Lihat Peta
+                        </a>
+                    </div>
+                    
+                    <!-- Resepsi Card -->
+                    <div class="card rounded-2xl p-8 w-full md:w-2/5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="font-serif-display text-3xl text-yellow-400">Resepsi</h3>
+                        <div class="w-20 h-1 bg-yellow-500 mx-auto my-4 rounded-full"></div>
+                        <p class="text-xl font-semibold"><i class="fas fa-calendar-check mr-2"></i>Minggu, 09 Nov 2025</p>
+                        <p class="text-lg mt-2"><i class="fas fa-clock mr-2"></i>Waktu: Rileks / Santai</p>
+                        <p class="mt-4 text-gray-300"><i class="fas fa-map-marker-alt mr-2"></i>Lokasi:</p>
+                        <p class="font-semibold">Rumah Mempelai Pria</p>
+                        <p class="text-sm text-gray-400">Ds. Gondanglegi Kec. Prambon Kab. Nganjuk</p>
+                        <a href="https://maps.app.goo.gl/95a4y2m6H8q9B7b27" target="_blank" class="mt-6 inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition duration-300">
+                            <i class="fas fa-map-location-dot mr-2"></i> Lihat Peta
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12">
+                     <p class="text-lg text-gray-300">Hiburan: Campursari</p>
+                     <p class="font-serif-display text-2xl text-yellow-400 mt-2">"SATRIO WIJOYO KUSUMO"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-20 px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                 <h2 class="font-serif-display text-4xl md:text-5xl text-yellow-400 mb-12">Galeri Kenangan</h2>
+                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://placehold.co/400x400/2c2c2c/a67c00?text=Foto+1" alt="Gallery image 1" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                     <div class="overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://placehold.co/400x400/2c2c2c/a67c00?text=Foto+2" alt="Gallery image 2" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                     <div class="overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://placehold.co/400x400/2c2c2c/a67c00?text=Foto+3" alt="Gallery image 3" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                     <div class="overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://placehold.co/400x400/2c2c2c/a67c00?text=Foto+4" alt="Gallery image 4" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- RSVP / Wishes Section -->
+        <section class="py-20 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 batik-pattern"></div>
+            <div class="relative z-10 max-w-2xl mx-auto text-center">
+                 <h2 class="font-serif-display text-4xl md:text-5xl text-yellow-400 mb-8">Kirim Ucapan & Doa</h2>
+                 <p class="text-gray-300 mb-10">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu kepada putra-putri kami.</p>
+                 <form id="rsvp-form" class="card rounded-2xl p-8 text-left shadow-2xl">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 mb-2">Nama Anda</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-300 mb-2">Ucapan & Doa</label>
+                        <textarea id="message" name="message" rows="4" class="w-full bg-gray-800 border border-gray-600 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                        Kirim Ucapan
+                    </button>
+                    <div id="form-success-message" class="hidden mt-4 text-center text-green-400">
+                        Terima kasih! Ucapan Anda telah terkirim.
+                    </div>
+                 </form>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center py-10 bg-black">
+            <p class="text-gray-400">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+            <p class="font-serif-display text-2xl text-yellow-400 mt-4">Ferdian & Agnes</p>
+            <p class="text-sm text-gray-500 mt-6">Hormat kami, <br>Bapak Suwandi & Ibu Retno Susilo Indrayanti Sekeluarga</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Countdown Timer Logic ---
+        // Set the date we're counting down to
+        const countDownDate = new Date("Nov 8, 2025 08:00:00").getTime();
+
+        // Update the count down every 1 second
+        var countdownInterval = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Output the result in elements
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl'>The Wedding Day is Here!</div>";
+            }
+        }, 1000);
+
+        // --- Open Invitation Logic ---
+        function openInvitation() {
+            const heroSection = document.getElementById('hero');
+            const mainContent = document.getElementById('main-content');
+            
+            // Fade out the hero section
+            heroSection.style.opacity = '0';
+            
+            // After fade out, hide hero and show main content
+            setTimeout(() => {
+                heroSection.classList.add('hidden');
+                mainContent.classList.remove('hidden');
+                // Scroll to the top of the main content
+                mainContent.scrollIntoView({ behavior: 'smooth' });
+            }, 500); // Match this duration with CSS transition
+        }
+
+        // --- RSVP Form Logic ---
+        const rsvpForm = document.getElementById('rsvp-form');
+        const successMessage = document.getElementById('form-success-message');
+
+        rsvpForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            
+            // Here you would typically send the data to a server or Google Sheets.
+            // For this demonstration, we'll just show a success message.
+            
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            if (name && message) {
+                successMessage.classList.remove('hidden');
+                rsvpForm.reset();
+
+                // Hide the message after a few seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            }
+        });
+    </script>
+
+</body>
+</html>
+
